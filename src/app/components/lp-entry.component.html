@@ -1,0 +1,86 @@
+<mat-card class="example-card">
+  <!-- {{lpCollection}} -->
+  <mat-card-header [ngStyle]="{'border-style':'solid','background-color':'#a17cd9','padding':'5px','width':'360px'}">
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>My LP</mat-card-title>
+    <mat-card-subtitle>Collection</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <form #lpFormEntry="ngForm" (ngSubmit)=addLpEntry()>
+      <div class="example-container">
+
+        <mat-form-field>
+          <input type="text" name="albumName" matInput placeholder="Album Name" ngModel required maxlength="10" minlength="2">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input type="text" name="artist" matInput placeholder="Artist" ngModel required  maxlength="10" minlength="2">
+        </mat-form-field>
+
+        <!--  -->
+        <h4 class="example-h2">Rating</h4>
+        <mat-slider name="rating" [(ngModel)]="ratingValue" thumbLabel [displayWith]="formatLabel" tickInterval="10" min="1" max="10"
+          ngModel></mat-slider>
+        <!--  -->
+
+        <mat-form-field>
+          <mat-select name="albumCoverImage" placeholder="Album Cover Image" ngModel required>
+            <mat-option value="Option">Option</mat-option>
+            <mat-option value="http://4.bp.blogspot.com/-G9lTR8a7wsg/VrHDIzEoyTI/AAAAAAAAAHY/6zq4csefDjY/s1600/Chris_Brown_cover.jpg">Chris
+              Brown
+            </mat-option>
+            <mat-option value="http://1.bp.blogspot.com/-uFoV18Ws0SI/VrHPUl2cN-I/AAAAAAAAAIE/dc0fyklOuoQ/s1600/emi.jpg">Eminem</mat-option>
+            <mat-option value="https://bhadoosky.com/wp-content/uploads/2018/01/Mr.-2Kay-Shares-Album-Title-Cover-Track-list-iTunes-Pre-order-Link-and-Release-Date.jpg">Mr
+              2Kay
+            </mat-option>
+            <mat-option value="https://skoolwerkapparel.files.wordpress.com/2013/07/12739_292734754168652_481481203_n.jpg">Barack
+              Obama
+            </mat-option>
+            <mat-option value="http://2.bp.blogspot.com/-u7ln32E0V6o/VrHDrV3QFKI/AAAAAAAAAHU/JKH-TSMr7T0/s1600/kirko-bangz-rich.jpeg">Kirko
+              Bangz
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+      <div fxlayout="row" fxLayoutAlign="space-around">
+          <button type="reset" mat-button mat-raised-button>CLEAR</button>
+          <button type="submit" mat-button mat-raised-button [disabled]="lpFormEntry.invalid">ADD</button>
+      </div>
+      
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <!-- <button mat-button>CLEAR</button> -->
+
+  </mat-card-actions>
+
+</mat-card>
+
+<!-- 
+<div style="border-style: none;margin-right: 10px;margin-top: 10px">
+  <h1 style="margin-left: 10px">LP Collection</h1>
+  <ul style="list-style: none">
+    <li *ngFor="let item of lpList; let i = index;" style="margin-top: 10px">
+      <div style="border-style: solid;margin-right: 10px;margin: 20px 20px 20px 20px" fxLayout="row" fxLayoutAlign="space-around">
+        <img src={{item.albumCoverImage}} width="96" height="96">
+        <div style="border-style: none;margin-right: 10px;width: 300px" fxLayout="column">
+          <h2 style="margin: 10px 10px 10px 10px">
+            {{item.albumName}}
+          </h2>
+          <div fxLayout="row" fxLayoutAlign="space-between" style="margin: 10px 10px 10px 10px">
+            <div>
+              {{item.artist}}
+            </div>
+            <div>
+              {{item.rating}}
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </li>
+  </ul>
+</div>
+ -->

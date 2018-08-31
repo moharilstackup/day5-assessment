@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'day5-assessment';
+  // lpCollection="lpCollection";
+  lpC="lpC";
+  lpCL = [ ];
 }

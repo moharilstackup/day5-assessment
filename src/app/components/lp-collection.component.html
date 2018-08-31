@@ -1,0 +1,83 @@
+<!-- <p>
+  lp-collection works!
+</p> 
+<div style="border-style: none;margin-right: 10px;margin-top: 10px">
+  <h1 style="margin-left: 10px">LP Collection</h1>
+  <ul style="list-style: none">
+    <li *ngFor="let item of lpCollectionList; let i = index;" style="margin-top: 10px">
+      <div style="border-style: solid;margin-right: 10px;margin: 20px 20px 20px 20px" fxLayout="row" fxLayoutAlign="space-around">
+        <img src={{item.albumCoverImage}} width="96" height="96">
+        <div style="border-style: none;margin-right: 10px;width: 300px" fxLayout="column">
+          <h2 style="margin: 10px 10px 10px 10px">
+            {{item.albumName}}
+          </h2>
+          <div fxLayout="row" fxLayoutAlign="space-between" style="margin: 10px 10px 10px 10px">
+            <div>
+              {{item.artist}}
+            </div>
+            <div>
+              {{item.rating}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+-->
+
+LP COLLECTION
+<div style="border-style: none;width:400px">
+    <ul style="list-style: none">
+      <li *ngFor="let item of lpCollectionList; let i = index;">
+        <div style="border-style: solid" fxLayout="row" fxLayoutAlign="space-around">
+          <img src={{item.albumCoverImage}} width="96" height="96">
+          <div style="border-style: none" fxLayout="column">
+            <h2>
+              {{item.albumName}}
+            </h2>
+            <div fxLayout="row" fxLayoutAlign="space-between">
+              <div>
+                {{item.artist}}
+              </div>
+              <div>
+                {{item.rating}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+<!-- 
+<mat-card>
+  <mat-card-header style="border-style: solid;width:380px">
+   LP COLLECTION
+  </mat-card-header>
+  <mat-card-content>
+    <div>
+      <ul style="list-style: none">
+        <li *ngFor="let item of lpCollectionList; let i = index;">
+          <div style="border-style: solid;width:350px" fxLayout="row" fxLayoutAlign="space-around">
+            <img src={{item.albumCoverImage}} width="96" height="96">
+            <div style="border-style: none" fxLayout="column">
+              <h2>
+                {{item.albumName}}
+              </h2>
+              <div fxLayout="row" fxLayoutAlign="space-between">
+                <div>
+                  {{item.artist}}
+                </div>
+                <div>
+                  {{item.rating}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </mat-card-content>
+</mat-card>
+ -->
